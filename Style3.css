@@ -1,29 +1,50 @@
 body{
     background-size:100%;
-    background-image:url(Background1-Image.png);
+    background-image:url(Background-Image.png);
     background-repeat: no-repeat;
 }
 
-.bestill-btn {
+
+
+.full-før-btn {
     display: inline-flex;
-    height: 100px;
+    height: 80px;
     width: 240px;
     font-size: 35px;
     justify-content: center;
     align-items: center;
     color: white;
     text-decoration: none;
-    margin-top: 12%;
-    margin-left: 39%;
+    margin-top: 18%;
+    margin-left: 40%;
     background: linear-gradient(to bottom, #3a3a3a, #000000);
-    border-radius: 8px;
+    border-radius: 80px;
     border: 1px solid #1a1a1a;
 
     transition: linear-gradient 0.3s ease,background-color 0.3s ease, border 0.3s ease;
 }
 
-.bestill-btn:hover {
+.full-før-btn:hover {
     background: linear-gradient(to bottom, #4a4a4a, #111111);
     background-color: #b6b6b6;
     border:1px solid white;
+}
+
+
+.Box {
+  margin-top:2%;
+  width: 90%;
+  padding: 10px 15px;
+  border: 2px solid black;
+  border-radius: 10px;  
+  font-size: 16px;
+  margin-bottom: 15px;
+  background-color: white;
+  margin-right: 10%;
+  margin-left:3%;
+}
+
+.Box-Text{
+    font-size: x-large;
+    color: white;
 }

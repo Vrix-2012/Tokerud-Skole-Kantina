@@ -3,3 +3,50 @@ body{
     background-image:url(Background2-Image.png);
     background-repeat: no-repeat;
 }
+.Elev-btn {
+    display: inline-flex;
+    height: 100px;
+    width: 240px;
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin-top: 10%;
+    margin-left: 39%;
+    background: linear-gradient(to bottom, #3a3a3a, #000000);
+    border-radius: 8px;
+    border: 1px solid #1a1a1a;
+
+    transition: linear-gradient 0.3s ease,background-color 0.3s ease, border 0.3s ease;
+}
+
+.Elev-btn:hover {
+    background: linear-gradient(to bottom, #4a4a4a, #111111);
+    background-color: #b6b6b6;
+    border:1px solid white;
+}
+
+.Lær-btn {
+    display: inline-flex;
+    height: 100px;
+    width: 240px;
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin-top: 8%;
+    margin-left: 39%;
+    background: linear-gradient(to bottom, #3a3a3a, #000000);
+    border-radius: 8px;
+    border: 1px solid #1a1a1a;
+
+    transition: linear-gradient 0.3s ease,background-color 0.3s ease, border 0.3s ease;
+}
+
+.Lær-btn:hover {
+    background: linear-gradient(to bottom, #4a4a4a, #111111);
+    background-color: #b6b6b6;
+    border:1px solid white;
+}
