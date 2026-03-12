@@ -1,6 +1,6 @@
 body{
-    background-size:100%;
     background-image:url(Background-Image.png);
+    background-size:100%;
     background-repeat: no-repeat;
 }
 
@@ -20,4 +20,39 @@ body{
 .Box-Text{
     font-size: x-large;
     color: white;
+}
+
+.choice{
+    flex-direction: column;
+    display: inline-flex;
+    height: 220px;
+    width: 200px;
+    font-size: 17px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin-top: 12%;
+    margin-left: 39%;
+    background: linear-gradient(to bottom, #000000, #b1aeae);
+    border-radius: 8px;
+    border: 1px solid #1a1a1a;
+
+    transition: linear-gradient 0.3s ease,background-color 0.3s ease, border 0.3s ease;
+}
+
+.choice:hover {
+    background: linear-gradient(to bottom, #b1aeae, #000000);
+    border:1px solid rgb(0, 0, 0);
+}
+
+.choice img{
+    margin-top: 20px;
+    height: 120px;
+    width: auto;
+}
+
+.choice p{
+  color: white;
+  margin-top: 20px;
 }
