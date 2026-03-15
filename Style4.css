@@ -15,12 +15,20 @@ body{
   background-color: white;
   margin-right: 10%;
   margin-left:3%;
+  color:black;
 }
 
-.Box-Text{
-    font-size: x-large;
-    color: white;
+.Box::placeholder {
+  color: black;
+  font-weight: bold;
+  opacity: 1;
 }
+
+.Box:focus {  
+  border: 2px solid #cfd3cf;  
+  outline: none;  
+}
+
 
 .choice{
     flex-direction: column;
@@ -33,7 +41,7 @@ body{
     color: white;
     text-decoration: none;
     margin-top: 12%;
-    margin-left: 39%;
+    margin-left: 0.5%;
     background: linear-gradient(to bottom, #000000, #b1aeae);
     border-radius: 8px;
     border: 1px solid #1a1a1a;
@@ -42,8 +50,9 @@ body{
 }
 
 .choice:hover {
-    background: linear-gradient(to bottom, #b1aeae, #000000);
-    border:1px solid rgb(0, 0, 0);
+    background: linear-gradient(to bottom, gold, #000000);
+    border:1px solid
+    rgb(255, 255, 255);
 }
 
 .choice img{
