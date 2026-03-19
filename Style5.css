@@ -1,0 +1,69 @@
+body{
+    font-family: Arial;
+    background: linear-gradient(to right, purple, pink);
+    color: white;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.product{
+    background: grey;
+    padding: 20px;
+    border-radius: 20px;
+    color: black;
+}
+
+.product img{
+    width: 200px;
+}
+
+.flavors button{
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#jord{
+    background:red;
+    color:white;
+}
+
+#van{
+    background:khaki;
+}
+
+#bla{
+    background:navy;
+    color:white;
+}
+
+#bring{
+    background:pink;
+}
+
+.payments button{
+    display:block;
+    margin:25px auto;
+    padding:15px 30px;
+    background:black;
+    color:white;
+    border:none;
+    border-radius:10px;
+}
+
+.vipps{
+    background:orange;
+    width:200px;
+    margin-left: 275px;
+    padding:20px;
+    border-radius:20px;
+    color:black;
+}
