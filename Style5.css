@@ -1,27 +1,10 @@
 body{
-    font-family: Arial;
-    background: linear-gradient(to right, purple, pink);
+    font-family: Cochin bold;
+    background: url(Background-Image.png);
     color: white;
     text-align: center;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 40px;
-}
-
-.product{
-    background: grey;
-    padding: 20px;
-    border-radius: 20px;
-    color: black;
-}
-
-.product img{
-    width: 200px;
-}
 
 .flavors button{
     padding: 10px 20px;
@@ -40,7 +23,7 @@ body{
     background:khaki;
 }
 
-#bla{
+#blå{
     background:navy;
     color:white;
 }
@@ -60,10 +43,9 @@ body{
 }
 
 .vipps{
-    background:orange;
+    height: auto;
     width:200px;
     margin-left: 275px;
     padding:20px;
     border-radius:20px;
-    color:black;
 }
