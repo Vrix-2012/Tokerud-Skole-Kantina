@@ -33,19 +33,15 @@
         </div>
 
         <div class="order">
-            <input type="number" min="1" max="5">
-            <input type="submit" value="Bestill">
+            
+            <input type="number" id="quantity" min="1" max="5" value="1">
+            <input type="submit" value="Bestill" id="bestillBtn">
         </div>
-
         <div class="payments">
             <a href="/Vipps.html">Betall med Vipps</a>
         </div>
 
-    </div>
-
-</div>
 <script>
-
 let selectedFlavor = '';
 
 document.getElementById('jord').addEventListener('click', () => selectedFlavor = 'Jordbær');
@@ -61,15 +57,15 @@ document.getElementById('bestillBtn').addEventListener('click', () => {
     let cart = JSON.parse(localStorage.getItem('cart') || "[]");
 
     cart.push({
-        name: product.querySelector('p').textContent.split(':')[0], 
-        price: parseInt(product.querySelector('p').textContent.split(':')[1]), 
+        name: product.querySelector('p').textContent.split(':')[0].trim(),
+        price: parseInt(product.querySelector('p').textContent.replace(/[^\d]/g, '')),
         flavor: selectedFlavor,
         quantity: quantity
     });
 
     localStorage.setItem('cart', JSON.stringify(cart));
     alert("Lagt til i handlekurv!");
-    window.location.href = "cart.html";
+    window.location.href = "/Total Sum/Total.html";
 });
 </script>
 </body>
