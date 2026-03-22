@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kantina App</title>
+<link rel="stylesheet" href="/Product Detail/Style5.css">
+</head>
+
+<body>
+
+<h1>KANTINE</h1>
+
+<div class="container">
+
+    <div class="left">
+
+        <a href="Index5.html" class="choice">
+            <img src="https://th.bing.com/th/id/OPEC.QLopF9yPSBMgbw474C474?o=5&pid=21.1&w=140&h=220&dpr=1,5&o=7&rm=3">
+            <p>Yoghurt: 15 kr</p>
+        </a>
+    </div>
+
+
+    <div class="menu">
+
+        <h2 style="text-decoration: underline;">Smaker</h2>
+
+        <div class="flavors">
+            <button id="jord">Jordbær</button>
+            <button id="van">Vanilje</button>
+            <button id="bla">Blåbær</button>
+            <button id="bring">Bringebær</button>
+        </div>
+
+        <div class="order">
+            <input type="number" min="1" max="5">
+            <input type="submit" value="Bestill">
+        </div>
+
+        <div class="payments">
+            <a href="Vipps.html">Betall med Vipps</a>
+        </div>
+
+    </div>
+
+</div>
+<script>
+
+let selectedFlavor = '';
+
+document.getElementById('jord').addEventListener('click', () => selectedFlavor = 'Jordbær');
+document.getElementById('van').addEventListener('click', () => selectedFlavor = 'Vanilje');
+document.getElementById('bla').addEventListener('click', () => selectedFlavor = 'Blåbær');
+document.getElementById('bring').addEventListener('click', () => selectedFlavor = 'Bringebær');
+
+document.getElementById('bestillBtn').addEventListener('click', () => {
+    const quantity = parseInt(document.getElementById('quantity').value);
+    if(!selectedFlavor) return alert("Vennligst velg en smak først!");
+    
+    const product = document.querySelector('.choice'); 
+    let cart = JSON.parse(localStorage.getItem('cart') || "[]");
+
+    cart.push({
+        name: product.querySelector('p').textContent.split(':')[0], 
+        price: parseInt(product.querySelector('p').textContent.split(':')[1]), 
+        flavor: selectedFlavor,
+        quantity: quantity
+    });
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert("Lagt til i handlekurv!");
+    window.location.href = "cart.html";
+});
+</script>
+</body>
+</html>

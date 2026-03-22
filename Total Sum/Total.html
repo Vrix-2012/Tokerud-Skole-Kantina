@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handlekurv</title>
+<link rel="stylesheet" href="/Total Sum/Style-total.css">
+</head>
+<body>
+<h1>Handlekurv</h1>
+<ul id="cartList"></ul>
+<button id="avslutt">Avslutt</button>
+
+<script>
+let cart = JSON.parse(localStorage.getItem('cart') || "[]");
+const cartList = document.getElementById('cartList');
+
+function rrCart() {
+    cartList.innerHTML = '';
+    let total = 0;
+    cart.forEach((item, i) => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} (${item.flavor}) x${item.quantity} = ${item.price * item.quantity}kr`;
+        total += item.price * item.quantity;
+        cartList.appendChild(li);
+    });
+    const totalLi = document.createElement('li');
+    totalLi.textContent = `Total: ${total} kr`;
+    cartList.appendChild(totalLi);
+}
+
+rrCart();
+
+document.getElementById('avslutt').addEventListener('click', () => {
+    localStorage.setItem('orders', JSON.stringify(cart)); // store for teacher
+    cart = [];
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert("Bestilling sendt!");
+    window.location.href = "Index5.html";
+});
+</script>
+</body>
+</html>

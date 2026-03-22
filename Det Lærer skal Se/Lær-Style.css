@@ -1,0 +1,47 @@
+/* Teacher Orders Page */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f8f8; /* Light gray background */
+    color: #222; /* Dark text for readability */
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    color: #111;
+}
+
+#ordersList {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0;
+}
+
+#ordersList p {
+    background: #fff; /* White background for each order */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#ordersList button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#ordersList button:hover {
+    background: #0056b3;
+}

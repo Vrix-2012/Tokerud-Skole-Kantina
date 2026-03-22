@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TokerudBites.no</title>
+    <link rel="stylesheet" href="/Login/Style3.css">
+</head>
+<body> 
+    <span>Register/Logg inn for Elever</span>
+    <input type="text" id="Epost" name="Epost" placeholder="Skole Epost:" class="Box"><br><br>
+    <input type="text" id="Pswrd" name="Pswrd" placeholder="Passord:" class="Box"><br><br>
+    <button class="full-før-btn" onclick="login()">Fullfør</button>
+        <script>
+function login() {
+    let email = document.getElementById("Epost").value;
+    let password = document.getElementById("Pswrd").value;
+
+    if (email === "" || password === "") {
+        alert("Fyll inn e-post og passord!");
+        return;
+    }
+
+    localStorage.setItem("ElevEmail", email);
+
+    alert("Logget inn som: " + email);
+
+    window.location.href = "Index4.html";
+}
+</script>
+</body>
+</html>

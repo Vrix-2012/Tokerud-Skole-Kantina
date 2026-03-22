@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teacher Orders</title>
+<link rel="stylesheet" href="/Det Lærer skal Se/Lær-Style.css">
+</head>
+<body>
+<h1>Ordre Oversikt</h1>
+<div id="ordersList"></div>
+
+<script>
+let orders = JSON.parse(localStorage.getItem('orders') || "[]");
+const ordersDiv = document.getElementById('ordersList');
+
+orders.forEach((item, i) => {
+    const p = document.createElement('p');
+    p.textContent = `${item.name} (${item.flavor}) x${item.quantity} = ${item.price * item.quantity}kr`;
+
+    const okBtn = document.createElement('button');
+    okBtn.textContent = "OK";
+    okBtn.addEventListener('click', () => {
+        alert("Ordre godkjent!");
+        p.remove();
+    });
+
+    const cancelBtn = document.createElement('button');
+    cancelBtn.textContent = "Cancel";
+    cancelBtn.addEventListener('click', () => {
+        alert("Ordre avvist!");
+        p.remove();
+    });
+
+    p.appendChild(okBtn);
+    p.appendChild(cancelBtn);
+    ordersDiv.appendChild(p);
+});
+</script>
+</body>
+</html>
